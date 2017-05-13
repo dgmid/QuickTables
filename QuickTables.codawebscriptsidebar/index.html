@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>QuickTables - Coda 2 webscript sidebar plugin v1.0 | @duncanmid</title>
+		
+		<link rel="stylesheet" href="style.css" />
+		
+		<script src="jquery-3.1.0.min.js"></script>
+		<script src="interface.js"></script>
+		<script src="generate.js"></script>
+	</head>
+
+	<body>
+		
+		<header>			
+			<table id="display">				
+				<caption><span>caption</span></caption>
+				<colgroup></colgroup>
+				<thead></thead>
+				<tfoot></tfoot>
+				<tbody></tbody>
+			</table>
+		</header>
+		
+		<div class="scroll">
+			<main>
+				<section>
+					<label>
+						<input type="checkbox" id="caption" /> include <span>&lt;caption&gt;</span>
+					</label>
+				</section>
+				
+				<section>
+					<label>
+						<input type="checkbox" id="colgroup" /> include <span>&lt;colgroup&gt;</span>
+					</label>
+				</section>
+				
+				<section>
+					<label>
+						<input type="checkbox" id="thead" /> include <span>&lt;thead&gt;</span>
+					</label>
+				</section>
+				
+				<section>
+					<p><span>&lt;tbody&gt;</span></p>
+					<div class="slider">
+						<span>rows:</span>
+						<input type="range" id="rows" min="1" max="20" value="" />
+						<input type="number" id="rowsnum" min="1" max="20" value="" />
+					</div>
+					
+					<div class="slider">
+						<span>cols:</span>
+						<input type="range" id="cols" min="1" max="20" value="" />
+						<input type="number" id="colsnum" min="1" max="20" value="" />
+					</div>
+				</section>
+				
+				<section>
+					<label>
+						<input type="checkbox" id="tfoot" checked /> include <span>&lt;tfoot&gt;</span>
+					</label>
+				</section>
+				
+				<section>
+					<label>
+						<input type="checkbox" id="content" /> include dummy text</span>
+					</label>
+				</section>
+			</main>
+			
+			<footer>
+				<button type="button" id="insert">insert</button>
+				<button type="button" id="code">code</button>
+			</footer>
+		</div>
+		
+	</body>
+</html>
